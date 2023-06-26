@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
+let window: Window & typeof globalThis;
+
 const StickyNavbar = () => {
   const [isSticky, setSticky] = useState(false);
   const changeNavbarColor = () => {
