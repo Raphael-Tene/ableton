@@ -5,7 +5,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="flex py-3 h-24 font-medium text-md overflow-hidden">
+    <header className="flex h-20 font-medium text-md overflow-hidden">
       <nav className="hidden lg:flex  bg-white w-full justify-between border-b border-b-gray-200 items-center px-5 y-2">
         <div className="flex items-center gap-5">
           <div>
