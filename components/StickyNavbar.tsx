@@ -1,19 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const StickyNavbar = () => {
   const [isSticky, setSticky] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbarColor);
 
+  useEffect(() => {
+    const changeNavbarColor = () => {
+      if (window.scrollY >= 80) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", changeNavbarColor);
+  }, []);
   return (
     <nav
       className={`sticky top-0 bottom-0 z-10 p-4 w-full overflow-hidden ${
